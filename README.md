@@ -35,4 +35,5 @@
 
 4. Para la elaboración de este proyecto se crea un **Makefile** con el fin de correr el setup (**make all**) y borrar (**clean**)los archivos generados por este cuando se realizan cambios en el codigo así como el **.csv** 
 
+5. Para finalizar se ejecuta el principal donde va a estar el **main** y acá ya ejecutara los dos programas y tomara los tiempos de cada uno para guardarlos en el archivo **.csv**. 
 </p>
