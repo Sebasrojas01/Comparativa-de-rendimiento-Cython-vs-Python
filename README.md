@@ -12,8 +12,7 @@
 </FONT>
 
 
-# Contexto  
-** Python y Cython ¿Qué son? **
+# Python y Cython ¿Qué son?
 
 * Python es un lenguaje de programación muy utilizado hoy en día, entre otras razones por que es cómodo para programar a alto nivel, además cuenta con muchas librerías y es un código fácilmente mantenible. A pesar de todas estas ventajas, cabe destacar que es notoriamente lento, por lo que es conveniente conocer algunas herramientas que permitan acelerar el código Python.
 
@@ -21,13 +20,19 @@
 
 * Sin embargo, programar en Cython también comporta una serie de inconvenientes, como la necesidad de compilar el código por separado antes de ejecutar el programa. También está el hecho de que comparado con lenguajes como C o Fortran, no tiene un soporte tan bueno para la paralelización de memoria.
 
-#Objetivo: Comparativa  de rendimiento Cython vs Python
+# Objetivo: Comparativa  de rendimiento Cython vs Python
 
 * Durante el desarrollo del ejercicio se seleccionan dos Algoritmos (Multiplicación de Matrices y el Palindrome de 3 Longitudes) con el fin de comparar los tiempos de rendimiento que se gastan a la hora de ser ejecutados con Python y con Cython y comprobar que Cython tiene un mejor rendimiento acomparación de Python.  
 
 * También hay que tener en cuenta el sistema operativo en el que se realizan las pruebas, para este paso es recomendable y sumamente eficiente emplear un Software ligero, como Ubuntu, debido a que este sistema operativo tiene un kernel de Linux basado en Debian, teniendo en cuenta su uso sencillo y el completo dominio que le brinda a su empleador; además de la cantidad de subprocesos innecesarios que tiene en segundo plano, es inferior en comparación con otros sistemas operativos, esto permite que las pruebas realizadas como la multiplicación para la toma de rendimiento tenga un mayor porcentaje de éxito y fiabilidad.
 
-#Construcción
-* Para la elaboración de este Algoritmo se opto por la multiplicación de Matrices Clasica para poder evidenciar mejor los tiempos empleados por cada Lenguaje, teniendo un Archivo principal llamado ***main.py*** donde se llamaran las funciones de cada lenguaje para ejecutar el algoritmo y las funciones de tiempo para contabilizar el tiempo empleado por cada uno, despues un archivo con el algoritmo de Multiplicación de Matrices en Lenguaje Python llamado ***multiplicacion_matreces_PY***, se crea un archivo especial en Cython con el mismo algoritmo acoplado para este lenguaje con el fin de ser más optimo que el de Python llamado ***multiplicacion_matreces_PY***
+# Construcción
+1. Para la elaboración de este Algoritmo se opto por la multiplicación de Matrices Clasica para poder evidenciar mejor los tiempos empleados por cada Lenguaje, teniendo un Archivo principal llamado ***main.py*** donde se llamaran a cada una las funciones de cada lenguaje para ejecutar el algoritmo y las funciones de tiempo para contabilizar el tiempo empleado por cada uno, tiempo incial y tiempo final, además con esgte archivo se quieren guardar lo tiempo que se ejecuten por cada repetición en un **.csv** para trabajar con esos datos si así se desea.  
+
+2. Se debe crear un archivo con el algoritmo que se desea trabajar para cada uno de los lenguajes, en este caso al trabjar con Python y Cython se crea un **.py** y un **.pyx**, recordando que el ALgoritmo se escoge primo para Python y una vez se tiene listo y define en Cython acoplandolo con lo necesario para que se ejecute con las reglas que este lenguaje maneja.
+
+3. Es necesario crear un Setup con el nombre del archivo **.pyx** para generar el archivo **.c** y el **.so** para poder ejecutar posteriormente el programa.
+
+4. Para la elaboración de este proyecto se crea un **Makefile** con el fin de correr el setup (**make all**) y borrar (**clean**)los archivos generados por este cuando se realizan cambios en el codigo así como el **.csv** 
 
 </p>
